@@ -83,28 +83,28 @@ class ViewController: UIViewController {
     }
     
     @IBAction func p1Plus(sender: AnyObject) {
-        if (player1Life != 0) {
+        if (player1Life != 0) && (player2Life != 0) {
             player1Life += 1
             updatePlayer1Life()
         }
     }
     
     @IBAction func p1Minus(sender: AnyObject) {
-        if (player1Life != 0) {
+        if (player1Life != 0) && (player2Life != 0) {
             player1Life -= 1
             updatePlayer1Life()
         }
     }
     
     @IBAction func p2Plus(sender: AnyObject) {
-        if (player2Life != 0) {
+        if (player2Life != 0) && (player1Life != 0) {
             player2Life += 1
             updatePlayer2Life()
         }
     }
     
     @IBAction func p2Minus(sender: AnyObject) {
-        if (player2Life != 0) {
+        if (player2Life != 0) && (player1Life != 0) {
             player2Life -= 1
             updatePlayer2Life()
         }
