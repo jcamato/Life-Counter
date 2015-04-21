@@ -173,7 +173,9 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="FQo-Lm-4Ot"/>
+                                        <exclude reference="KUq-a2-7Ui"/>
                                         <exclude reference="fvY-fY-9mh"/>
+                                        <exclude reference="8Ws-wT-mji"/>
                                     </mask>
                                 </variation>
                             </view>
