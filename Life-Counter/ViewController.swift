@@ -96,6 +96,30 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func p1MinusFive(sender: AnyObject) {
+        if (player1Life != 0) && (player2Life != 0) {
+            if (player1Life >= 5) {
+                player1Life -= 5
+            }
+            else {
+                player1Life = 0
+            }
+            updatePlayer1Life()
+        }
+    }
+    
+    @IBAction func p2MinusFive(sender: AnyObject) {
+        if (player1Life != 0) && (player2Life != 0) {
+            if (player2Life >= 5) {
+                player2Life -= 5
+            }
+            else {
+                player2Life = 0
+            }
+            updatePlayer2Life()
+        }
+    }
+    
     @IBAction func p2Plus(sender: AnyObject) {
         if (player2Life != 0) && (player1Life != 0) {
             player2Life += 1
