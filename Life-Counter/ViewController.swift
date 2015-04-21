@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
+    
+    //sahand tips: unwind segue, passing data between view controllers
 
     var player1Life: Int = 20
     var player2Life: Int = 20
@@ -85,8 +88,6 @@ class ViewController: UIViewController {
             updatePlayer2Life()
         }
     }
-    
-    
     
     override func prefersStatusBarHidden() -> Bool {
         return false
