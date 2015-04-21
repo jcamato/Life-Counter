@@ -411,6 +411,7 @@
 				AB4064E91AE5F6EB00A1EE1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB4064EA1AE5F6EB00A1EE1A /* Build configuration list for PBXNativeTarget "Life-CounterTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				AB4064EC1AE5F6EB00A1EE1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
