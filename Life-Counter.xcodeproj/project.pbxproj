@@ -14,6 +14,13 @@
 		AB4064D81AE5F6EB00A1EE1A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4064D61AE5F6EB00A1EE1A /* LaunchScreen.xib */; };
 		AB4064E41AE5F6EB00A1EE1A /* Life_CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4064E31AE5F6EB00A1EE1A /* Life_CounterTests.swift */; };
 		AB4222121AE614F400227A37 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4222111AE614F400227A37 /* SettingsViewController.swift */; };
+		AB4960DA1AE630A80043BB68 /* Dice1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4960D41AE630A80043BB68 /* Dice1.png */; };
+		AB4960DB1AE630A80043BB68 /* Dice2.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4960D51AE630A80043BB68 /* Dice2.png */; };
+		AB4960DC1AE630A80043BB68 /* Dice3.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4960D61AE630A80043BB68 /* Dice3.png */; };
+		AB4960DD1AE630A80043BB68 /* Dice4.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4960D71AE630A80043BB68 /* Dice4.png */; };
+		AB4960DE1AE630A80043BB68 /* Dice5.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4960D81AE630A80043BB68 /* Dice5.png */; };
+		AB4960DF1AE630A80043BB68 /* Dice6.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4960D91AE630A80043BB68 /* Dice6.png */; };
+		AB4960E11AE63BE20043BB68 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4960E01AE63BE20043BB68 /* Settings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,13 @@
 		AB4064E21AE5F6EB00A1EE1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB4064E31AE5F6EB00A1EE1A /* Life_CounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Life_CounterTests.swift; sourceTree = "<group>"; };
 		AB4222111AE614F400227A37 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AB4960D41AE630A80043BB68 /* Dice1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dice1.png; sourceTree = "<group>"; };
+		AB4960D51AE630A80043BB68 /* Dice2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dice2.png; sourceTree = "<group>"; };
+		AB4960D61AE630A80043BB68 /* Dice3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dice3.png; sourceTree = "<group>"; };
+		AB4960D71AE630A80043BB68 /* Dice4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dice4.png; sourceTree = "<group>"; };
+		AB4960D81AE630A80043BB68 /* Dice5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dice5.png; sourceTree = "<group>"; };
+		AB4960D91AE630A80043BB68 /* Dice6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dice6.png; sourceTree = "<group>"; };
+		AB4960E01AE63BE20043BB68 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +93,7 @@
 		AB4064CA1AE5F6EB00A1EE1A /* Life-Counter */ = {
 			isa = PBXGroup;
 			children = (
+				AB4960D31AE630820043BB68 /* Resources */,
 				AB4064CD1AE5F6EB00A1EE1A /* AppDelegate.swift */,
 				AB4064CF1AE5F6EB00A1EE1A /* ViewController.swift */,
 				AB4222111AE614F400227A37 /* SettingsViewController.swift */,
@@ -113,6 +128,20 @@
 				AB4064E21AE5F6EB00A1EE1A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB4960D31AE630820043BB68 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB4960E01AE63BE20043BB68 /* Settings.png */,
+				AB4960D41AE630A80043BB68 /* Dice1.png */,
+				AB4960D51AE630A80043BB68 /* Dice2.png */,
+				AB4960D61AE630A80043BB68 /* Dice3.png */,
+				AB4960D71AE630A80043BB68 /* Dice4.png */,
+				AB4960D81AE630A80043BB68 /* Dice5.png */,
+				AB4960D91AE630A80043BB68 /* Dice6.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +224,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4960E11AE63BE20043BB68 /* Settings.png in Resources */,
 				AB4064D31AE5F6EB00A1EE1A /* Main.storyboard in Resources */,
 				AB4064D81AE5F6EB00A1EE1A /* LaunchScreen.xib in Resources */,
+				AB4960DD1AE630A80043BB68 /* Dice4.png in Resources */,
+				AB4960DC1AE630A80043BB68 /* Dice3.png in Resources */,
+				AB4960DA1AE630A80043BB68 /* Dice1.png in Resources */,
+				AB4960DF1AE630A80043BB68 /* Dice6.png in Resources */,
 				AB4064D51AE5F6EB00A1EE1A /* Images.xcassets in Resources */,
+				AB4960DE1AE630A80043BB68 /* Dice5.png in Resources */,
+				AB4960DB1AE630A80043BB68 /* Dice2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -49,7 +49,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="8rW-cT-ABE"/>
                                     <constraint firstAttribute="height" constant="300" id="lhf-XD-Z1o"/>
@@ -87,7 +87,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="F41-Uc-plg"/>
                                     <constraint firstAttribute="height" constant="300" id="QJX-3y-2D1"/>
@@ -105,7 +105,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpr-tl-rvf">
-                                <rect key="frame" x="225" y="20" width="150" height="100"/>
+                                <rect key="frame" x="225" y="0.0" width="150" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="–" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qp9-Y3-OUh">
                                         <rect key="frame" x="60" y="35" width="30" height="30"/>
@@ -153,7 +153,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="kwH-K0-Xcn" firstAttribute="top" secondItem="lpr-tl-rvf" secondAttribute="top" constant="25" id="8Ws-wT-mji"/>
                                     <constraint firstAttribute="centerY" secondItem="qp9-Y3-OUh" secondAttribute="centerY" id="AJy-ge-cem"/>
@@ -179,23 +179,69 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6u2-HC-eEf">
-                                <rect key="frame" x="527" y="28" width="57" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6u2-HC-eEf">
+                                <rect key="frame" x="539" y="28" width="45" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="5rZ-5c-lHE"/>
-                                    <constraint firstAttribute="height" constant="30" id="Z9U-cy-fW7"/>
+                                    <constraint firstAttribute="width" constant="45" id="5rZ-5c-lHE"/>
+                                    <constraint firstAttribute="height" constant="45" id="Z9U-cy-fW7"/>
                                 </constraints>
-                                <state key="normal" title="Settings">
+                                <state key="normal" title="Settings" image="Settings.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="f49-lp-uYh" kind="show" id="FcU-YS-ovW"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-TZ-tYY">
+                                <rect key="frame" x="200" y="500" width="200" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice4.png" translatesAutoresizingMaskIntoConstraints="NO" id="WdA-d1-TFt">
+                                        <rect key="frame" x="160" y="30" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="9Xn-Gb-bhr"/>
+                                            <constraint firstAttribute="height" constant="40" id="VpN-Df-NSz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8u-tN-UU0">
+                                        <rect key="frame" x="65" y="35" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="26k-ff-iq5"/>
+                                            <constraint firstAttribute="width" constant="70" id="fXy-uX-E14"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Roll Dice">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rollDice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fIA-i6-38w"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice3.png" translatesAutoresizingMaskIntoConstraints="NO" id="fSl-eA-KS1">
+                                        <rect key="frame" x="0.0" y="27" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="Kmg-SW-fnG"/>
+                                            <constraint firstAttribute="height" constant="45" id="ufY-3z-e2q"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4av-WO-rGl"/>
+                                    <constraint firstAttribute="centerY" secondItem="h8u-tN-UU0" secondAttribute="centerY" id="4vb-pd-LVg"/>
+                                    <constraint firstAttribute="centerY" secondItem="WdA-d1-TFt" secondAttribute="centerY" id="6Xh-iZ-LKH"/>
+                                    <constraint firstAttribute="centerX" secondItem="h8u-tN-UU0" secondAttribute="centerX" id="C6q-aa-xbH"/>
+                                    <constraint firstAttribute="width" constant="200" id="HKJ-Sw-5Zk"/>
+                                    <constraint firstAttribute="trailing" secondItem="WdA-d1-TFt" secondAttribute="trailing" id="O0y-OX-j1y"/>
+                                    <constraint firstItem="fSl-eA-KS1" firstAttribute="leading" secondItem="UxL-TZ-tYY" secondAttribute="leading" id="cZN-gX-q5w"/>
+                                    <constraint firstAttribute="centerY" secondItem="fSl-eA-KS1" secondAttribute="centerY" id="qNf-3v-8tc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="BsO-tU-ngg" secondAttribute="centerY" id="2Gx-Px-kGU"/>
+                            <constraint firstItem="lpr-tl-rvf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="2jf-kc-Opl"/>
                             <constraint firstAttribute="centerX" secondItem="lpr-tl-rvf" secondAttribute="centerX" id="4dk-wV-Jhe"/>
                             <constraint firstAttribute="centerY" secondItem="qD1-P1-kNw" secondAttribute="centerY" id="ECK-8O-ROC"/>
                             <constraint firstItem="lpr-tl-rvf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ICa-dh-lSZ"/>
@@ -206,12 +252,21 @@
                             <constraint firstItem="6u2-HC-eEf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gea-zt-sCV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jJn-5N-HCi" secondAttribute="trailing" id="hQA-KR-8Ld"/>
                             <constraint firstItem="BsO-tU-ngg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jeo-ku-eVu"/>
+                            <constraint firstAttribute="centerX" secondItem="UxL-TZ-tYY" secondAttribute="centerX" id="kci-5h-ciN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UxL-TZ-tYY" secondAttribute="bottom" id="kqH-e8-2M7"/>
                             <constraint firstAttribute="centerX" secondItem="qD1-P1-kNw" secondAttribute="centerX" id="lEG-7F-hIM"/>
                             <constraint firstAttribute="centerY" secondItem="jJn-5N-HCi" secondAttribute="centerY" id="lwA-BR-UwR"/>
                             <constraint firstAttribute="centerY" secondItem="BsO-tU-ngg" secondAttribute="centerY" id="pnn-Mg-6Kq"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ICa-dh-lSZ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="dice1Image" destination="fSl-eA-KS1" id="UgN-Ot-Qh5"/>
+                        <outlet property="dice2Image" destination="WdA-d1-TFt" id="Mtz-R4-bJq"/>
                         <outlet property="player1GamesLabel" destination="8bO-gm-uXj" id="cqf-EA-dWH"/>
                         <outlet property="player1LifeLabel" destination="I9p-Eg-16u" id="klA-xT-pqN"/>
                         <outlet property="player2GamesLabel" destination="kwH-K0-Xcn" id="xt9-yR-ugB"/>
@@ -241,6 +296,9 @@
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SPi-KH-Kka">
                                         <rect key="frame" x="182" y="28" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchPressed:" destination="f49-lp-uYh" eventType="valueChanged" id="0vR-52-hfP"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dice" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxT-ex-MhJ">
                                         <rect key="frame" x="31" y="173" width="33" height="21"/>
@@ -348,10 +406,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mySwitch" destination="SPi-KH-Kka" id="1tJ-kV-wrY"/>
+                        <outlet property="switchTest" destination="TZb-1F-7uc" id="zwl-dy-WMT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFZ-2A-309" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1129" y="1048"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Dice3.png" width="200" height="200"/>
+        <image name="Dice4.png" width="200" height="200"/>
+        <image name="Settings.png" width="200" height="200"/>
+    </resources>
 </document>

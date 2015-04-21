@@ -26,9 +26,26 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var player2GamesLabel: UILabel!
     
+    @IBOutlet weak var dice1Image: UIImageView!
+    
+    @IBOutlet weak var dice2Image: UIImageView!
+    
+    var blue = UIColor(red: (58/255.0), green: (131/255.0), blue: (180/255.0), alpha: 1)
+    var green = UIColor(red: (83/255.0), green: (162/255.0), blue: (111/255.0), alpha: 1)
+
+    func makeGradient() {
+        var gradientColors: [CGColor] = [green.CGColor, blue.CGColor]
+        var gradientLayer: CAGradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.colors = gradientColors
+        gradientLayer.startPoint = CGPointMake(0, 0.5);
+        gradientLayer.endPoint = CGPointMake(1.0, 0.5);
+        self.view.layer.insertSublayer(gradientLayer, atIndex: 0)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        makeGradient()
     }
     
     @IBAction func resetGames(sender: AnyObject) {
@@ -41,8 +58,10 @@ class ViewController: UIViewController {
     @IBAction func resetLife(sender: AnyObject) {
         player1Life = 20
         updatePlayer1Life()
+        player1LifeLabel.textColor = UIColor.blackColor()
         player2Life = 20
         updatePlayer2Life()
+        player2LifeLabel.textColor = UIColor.blackColor()
     }
     
     func updatePlayer1Life() {
@@ -50,6 +69,7 @@ class ViewController: UIViewController {
         if (player1Life == 0) {
             player1Games += 1
             player1GamesLabel.text = "\(player1Games)"
+            player1LifeLabel.textColor = UIColor.redColor()
         }
     }
     
@@ -58,6 +78,7 @@ class ViewController: UIViewController {
         if (player2Life == 0) {
             player2Games += 1
             player2GamesLabel.text = "\(player2Games)"
+            player2LifeLabel.textColor = UIColor.redColor()
         }
     }
     
@@ -87,6 +108,13 @@ class ViewController: UIViewController {
             player2Life -= 1
             updatePlayer2Life()
         }
+    }
+    
+    @IBAction func rollDice(sender: AnyObject) {
+        var dice1 = 1 + Int(arc4random_uniform(UInt32(6)))
+        var dice2 = 1 + Int(arc4random_uniform(UInt32(6)))
+        dice1Image.image = UIImage(named:"dice\(dice1).png")
+        dice2Image.image = UIImage(named:"dice\(dice2).png")
     }
     
     override func prefersStatusBarHidden() -> Bool {
