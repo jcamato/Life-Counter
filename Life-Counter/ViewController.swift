@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     
     var player1Infect: Int = 0
     var player2Infect: Int = 0
+    
+    var Infect: String = ""
+    var Dice: String = ""
 
     @IBOutlet weak var player1LifeLabel: UILabel!
     @IBOutlet weak var player2LifeLabel: UILabel!
@@ -59,6 +62,19 @@ class ViewController: UIViewController {
         makeGradient()
         player1InfectUndoLabel.alpha = 0
         player2InfectUndoLabel.alpha = 0
+        
+        println("Infect: \(Infect)")
+        
+        if (Infect == "1") {
+            hideInfect()
+        } else {
+            showInfect()
+        }
+        if (Dice == "1") {
+            hideDice()
+        } else {
+            showDice()
+        }
     }
     
     func gameHasEnded() -> Bool {

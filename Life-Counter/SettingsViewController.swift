@@ -51,20 +51,20 @@ class SettingsViewController: UIViewController {
         }
     }
 
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var mainVC: ViewController = segue.destinationViewController as! ViewController
         
-        if (hideInfect == true) {
-            mainVC.hideInfect()
+        if hideInfect {
+            mainVC.Infect == "1"
+            
         } else {
-            mainVC.showInfect()
+            mainVC.Infect == "0"
         }
         
-        if (hideDice == true) {
-            mainVC.hideDice()
+        if hideDice {
+            mainVC.Dice == "1"
         } else {
-            mainVC.showDice()
+            mainVC.Dice == "0"
         }
 
     }
