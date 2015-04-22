@@ -10,8 +10,6 @@ import UIKit
 import QuartzCore
 
 class ViewController: UIViewController {
-    
-    //sahand tips: unwind segue, passing data between view controllers
 
     var player1Life: Int = 20
     var player2Life: Int = 20
@@ -61,15 +59,6 @@ class ViewController: UIViewController {
         makeGradient()
         player1InfectUndoLabel.alpha = 0
         player2InfectUndoLabel.alpha = 0
-        
-        //show/hide settings
-        //settingsButton.hidden = true
-        
-        //show/hide infect
-        //hideInfect()
-        
-        //show/hide dice
-        //hideDice()
     }
     
     func gameHasEnded() -> Bool {
@@ -227,8 +216,8 @@ class ViewController: UIViewController {
     @IBAction func rollDice(sender: AnyObject) {
         var dice1 = 1 + Int(arc4random_uniform(UInt32(6)))
         var dice2 = 1 + Int(arc4random_uniform(UInt32(6)))
-        dice1Image.image = UIImage(named:"dice\(dice1)")
-        dice2Image.image = UIImage(named:"dice\(dice2)")
+        dice1Image.image = UIImage(named: "Dice\(dice1)")
+        dice2Image.image = UIImage(named: "Dice\(dice2)")
     }
     
     func hideInfect() {
@@ -240,10 +229,25 @@ class ViewController: UIViewController {
         player2InfectButton.hidden = true
     }
     
+    func showInfect() {
+        player1InfectLabel.hidden = false
+        player1InfectUndoLabel.hidden = false
+        player1InfectButton.hidden = false
+        player2InfectLabel.hidden = false
+        player2InfectUndoLabel.hidden = false
+        player2InfectButton.hidden = false
+    }
+    
     func hideDice() {
         dice1Image.hidden = true
         dice2Image.hidden = true
         rollDiceButton.hidden = true
+    }
+    
+    func showDice() {
+        dice1Image.hidden = false
+        dice2Image.hidden = false
+        rollDiceButton.hidden = false
     }
     
     override func prefersStatusBarHidden() -> Bool {

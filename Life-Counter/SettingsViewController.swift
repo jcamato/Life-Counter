@@ -11,23 +11,14 @@ import QuartzCore
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var infectButton: UISwitch!
+    @IBOutlet weak var diceButton: UISwitch!
     
-    //var white = UIColor(red: (255/255.0), green: (255/255.0), blue: (255/255.0), alpha: 1)
+    var hideInfect : Bool = false
+    var hideDice : Bool = false
+    
     var blue = UIColor(red: (58/255.0), green: (131/255.0), blue: (180/255.0), alpha: 1)
-    //var black = UIColor(red: (90/255.0), green: (90/255.0), blue: (90/255.0), alpha: 1)
-    //var red = UIColor(red: (178/255.0), green: (58/255.0), blue: (58/255.0), alpha: 1)
     var green = UIColor(red: (83/255.0), green: (162/255.0), blue: (111/255.0), alpha: 1)
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        // Put this setup code in the viewDidLoad method.
-        makeGradient()
-    }
-    
-   
-    
     
     func makeGradient() {
         var gradientColors: [CGColor] = [green.CGColor, blue.CGColor]
@@ -38,5 +29,49 @@ class SettingsViewController: UIViewController {
         gradientLayer.endPoint = CGPointMake(1.0, 0.5);
         self.view.layer.insertSublayer(gradientLayer, atIndex: 0)
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        makeGradient()
+    }
+    
+    @IBAction func showInfect(sender: AnyObject) {
+        if infectButton.on {
+            hideInfect = false
+        } else {
+            hideInfect = true
+        }
+    }
+    
+    @IBAction func showDice(sender: AnyObject) {
+        if diceButton.on {
+            hideDice = false
+        } else {
+            hideDice = true
+        }
+    }
+
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var mainVC: ViewController = segue.destinationViewController as! ViewController
+        
+        if (hideInfect == true) {
+            mainVC.hideInfect()
+        } else {
+            mainVC.showInfect()
+        }
+        
+        if (hideDice == true) {
+            mainVC.hideDice()
+        } else {
+            mainVC.showDice()
+        }
+
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return false
+    }
+    
     
 }

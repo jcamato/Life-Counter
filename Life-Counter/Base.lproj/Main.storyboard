@@ -365,6 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="342" y="387"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="R8Q-lc-LHp">
@@ -435,11 +436,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofP-ij-Q1u">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofP-ij-Q1u">
+                                <rect key="frame" x="150" y="260" width="300" height="80"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Atj-hb-IgW">
                                         <rect key="frame" x="243" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="showInfect:" destination="f49-lp-uYh" eventType="valueChanged" id="Ws4-0M-8SF"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dice" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxT-ex-MhJ">
                                         <rect key="frame" x="8" y="52" width="40" height="21"/>
@@ -455,22 +459,37 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvP-gY-OqD">
                                         <rect key="frame" x="243" y="47" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="showDice:" destination="f49-lp-uYh" eventType="valueChanged" id="kts-Ey-Vi9"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="bI9-uc-2K9"/>
+                                    <constraint firstAttribute="width" constant="300" id="cDh-Uk-2qZ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="ofP-ij-Q1u" secondAttribute="centerY" id="LSf-fP-zuI"/>
+                            <constraint firstAttribute="centerX" secondItem="ofP-ij-Q1u" secondAttribute="centerX" id="njS-gN-rft"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="xoh-fk-Wab"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="diceButton" destination="qvP-gY-OqD" id="zcp-lR-bOg"/>
+                        <outlet property="infectButton" destination="Atj-hb-IgW" id="eQH-gS-LUg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFZ-2A-309" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="1048"/>
+            <point key="canvasLocation" x="1075" y="387"/>
         </scene>
     </scenes>
     <resources>
