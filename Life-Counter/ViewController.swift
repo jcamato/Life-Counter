@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     var player1Infect: Int = 0
     var player2Infect: Int = 0
     
-    var Infect: String = ""
-    var Dice: String = ""
+    var Infect: Bool = true
+    var Dice: Bool = true
 
     @IBOutlet weak var player1LifeLabel: UILabel!
     @IBOutlet weak var player2LifeLabel: UILabel!
@@ -63,14 +63,13 @@ class ViewController: UIViewController {
         player1InfectUndoLabel.alpha = 0
         player2InfectUndoLabel.alpha = 0
         
-        println("Infect: \(Infect)")
-        
-        if (Infect == "1") {
+        if !Infect {
             hideInfect()
         } else {
             showInfect()
         }
-        if (Dice == "1") {
+        
+        if !Dice {
             hideDice()
         } else {
             showDice()
@@ -266,6 +265,22 @@ class ViewController: UIViewController {
         rollDiceButton.hidden = false
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var settingsVC: SettingsViewController = segue.destinationViewController as! SettingsViewController
+        
+        if !Infect {
+            settingsVC.hideInfect = true
+        } else {
+            settingsVC.hideInfect = false
+        }
+        
+        if !Dice {
+        settingsVC.hideDice = true
+        } else {
+        settingsVC.hideDice = false
+        }
+    }
+
     override func prefersStatusBarHidden() -> Bool {
         return false
     }

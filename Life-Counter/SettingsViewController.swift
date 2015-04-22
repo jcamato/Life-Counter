@@ -14,8 +14,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var infectButton: UISwitch!
     @IBOutlet weak var diceButton: UISwitch!
     
-    var hideInfect : Bool = false
-    var hideDice : Bool = false
+    var hideInfect: Bool = false
+    var hideDice: Bool = false
     
     var blue = UIColor(red: (58/255.0), green: (131/255.0), blue: (180/255.0), alpha: 1)
     var green = UIColor(red: (83/255.0), green: (162/255.0), blue: (111/255.0), alpha: 1)
@@ -33,6 +33,18 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         makeGradient()
+        
+        if hideInfect {
+            infectButton.on = false
+        } else {
+            infectButton.on = true
+        }
+        
+        if hideDice {
+            diceButton.on = false
+        } else {
+            diceButton.on = true
+        }
     }
     
     @IBAction func showInfect(sender: AnyObject) {
@@ -55,16 +67,16 @@ class SettingsViewController: UIViewController {
         var mainVC: ViewController = segue.destinationViewController as! ViewController
         
         if hideInfect {
-            mainVC.Infect == "1"
+            mainVC.Infect = false
             
         } else {
-            mainVC.Infect == "0"
+            mainVC.Infect = true
         }
         
         if hideDice {
-            mainVC.Dice == "1"
+            mainVC.Dice = false
         } else {
-            mainVC.Dice == "0"
+            mainVC.Dice = true
         }
 
     }
