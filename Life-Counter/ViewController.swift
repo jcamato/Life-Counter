@@ -63,10 +63,12 @@ class ViewController: UIViewController {
         player2InfectUndoLabel.alpha = 0
         
         //show/hide settings
-        settingsButton.hidden = true
+        //settingsButton.hidden = true
+        
         //show/hide infect
         //hideInfect()
-        //show/hide infect
+        
+        //show/hide dice
         //hideDice()
     }
     
@@ -225,8 +227,8 @@ class ViewController: UIViewController {
     @IBAction func rollDice(sender: AnyObject) {
         var dice1 = 1 + Int(arc4random_uniform(UInt32(6)))
         var dice2 = 1 + Int(arc4random_uniform(UInt32(6)))
-        dice1Image.image = UIImage(named:"dice\(dice1).png")
-        dice2Image.image = UIImage(named:"dice\(dice2).png")
+        dice1Image.image = UIImage(named:"dice\(dice1)")
+        dice2Image.image = UIImage(named:"dice\(dice2)")
     }
     
     func hideInfect() {
