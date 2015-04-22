@@ -41,6 +41,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var settingsButton: UIButton!
     
+    @IBOutlet weak var rollDiceButton: UIButton!
+    
     var blue = UIColor(red: (58/255.0), green: (131/255.0), blue: (180/255.0), alpha: 1)
     var green = UIColor(red: (83/255.0), green: (162/255.0), blue: (111/255.0), alpha: 1)
 
@@ -59,7 +61,13 @@ class ViewController: UIViewController {
         makeGradient()
         player1InfectUndoLabel.alpha = 0
         player2InfectUndoLabel.alpha = 0
+        
+        //show/hide settings
         settingsButton.hidden = true
+        //show/hide infect
+        //hideInfect()
+        //show/hide infect
+        //hideDice()
     }
     
     func gameHasEnded() -> Bool {
@@ -225,6 +233,15 @@ class ViewController: UIViewController {
         player1InfectLabel.hidden = true
         player1InfectUndoLabel.hidden = true
         player1InfectButton.hidden = true
+        player2InfectLabel.hidden = true
+        player2InfectUndoLabel.hidden = true
+        player2InfectButton.hidden = true
+    }
+    
+    func hideDice() {
+        dice1Image.hidden = true
+        dice2Image.hidden = true
+        rollDiceButton.hidden = true
     }
     
     override func prefersStatusBarHidden() -> Bool {
