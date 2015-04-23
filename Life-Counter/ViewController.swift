@@ -59,9 +59,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         makeGradient()
+        
         player1InfectUndoLabel.alpha = 0
         player2InfectUndoLabel.alpha = 0
+        
+        UIApplication.sharedApplication().idleTimerDisabled = true
         
         if !Infect {
             hideInfect()
