@@ -278,6 +278,7 @@ class ViewController: UIViewController {
         gamesView.hidden = true
         diceView.hidden = true
         resetButton.hidden = true
+        settingsButton.hidden = true
         backButton.hidden = false
         settingsView.hidden = false
     }
@@ -288,6 +289,7 @@ class ViewController: UIViewController {
         gamesView.hidden = false
         diceView.hidden = false
         resetButton.hidden = false
+        settingsButton.hidden = false
         backButton.hidden = true
         settingsView.hidden = true
     }
