@@ -357,7 +357,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="f49-lp-uYh" kind="show" id="FcU-YS-ovW"/>
+                                    <action selector="showSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wgc-Vo-GUO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qD1-P1-kNw">
@@ -371,6 +371,57 @@
                                     <action selector="resetLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EwU-s3-QRt"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKY-Hq-iPt">
+                                <rect key="frame" x="150" y="260" width="300" height="80"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q09-aJ-ovO">
+                                        <rect key="frame" x="243" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="showInfectButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="X9u-1o-UUV"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dice" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpd-sw-XIJ">
+                                        <rect key="frame" x="8" y="52" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="infect counters" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdq-CS-Ike">
+                                        <rect key="frame" x="8" y="8" width="150" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kgP-Zn-LA2">
+                                        <rect key="frame" x="243" y="47" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="showDiceButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="VnJ-yP-kHb"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="R4E-7K-uAO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="TZY-kW-vrg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="iOd-sS-Pvs"/>
+                                    <constraint firstAttribute="height" constant="80" id="n42-ff-tVA"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x96-fM-gLQ">
+                                <rect key="frame" x="16" y="28" width="75" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="7MT-bx-5DH"/>
+                                    <constraint firstAttribute="height" constant="38" id="MTA-OG-vSV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="← Back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nst-WK-vj8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -378,31 +429,44 @@
                             <constraint firstItem="lpr-tl-rvf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="2jf-kc-Opl"/>
                             <constraint firstAttribute="centerX" secondItem="lpr-tl-rvf" secondAttribute="centerX" id="4dk-wV-Jhe"/>
                             <constraint firstAttribute="centerY" secondItem="qD1-P1-kNw" secondAttribute="centerY" id="ECK-8O-ROC"/>
+                            <constraint firstItem="x96-fM-gLQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Ku7-rM-jZn"/>
                             <constraint firstItem="jJn-5N-HCi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LDp-mQ-mN1"/>
+                            <constraint firstAttribute="centerX" secondItem="oKY-Hq-iPt" secondAttribute="centerX" id="M51-LO-52c"/>
                             <constraint firstItem="BsO-tU-ngg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Web-Rt-emK"/>
                             <constraint firstItem="6u2-HC-eEf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Wxh-SU-SLx"/>
                             <constraint firstAttribute="centerY" secondItem="jJn-5N-HCi" secondAttribute="centerY" id="dVY-Dx-Cu7"/>
                             <constraint firstItem="6u2-HC-eEf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gea-zt-sCV"/>
                             <constraint firstAttribute="centerX" secondItem="UxL-TZ-tYY" secondAttribute="centerX" id="kci-5h-ciN"/>
+                            <constraint firstItem="x96-fM-gLQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kex-YY-4IO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UxL-TZ-tYY" secondAttribute="bottom" constant="8" id="kqH-e8-2M7"/>
                             <constraint firstAttribute="centerX" secondItem="qD1-P1-kNw" secondAttribute="centerX" id="lEG-7F-hIM"/>
+                            <constraint firstAttribute="centerY" secondItem="oKY-Hq-iPt" secondAttribute="centerY" id="qCb-QP-cHb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="x96-fM-gLQ" id="sER-8e-rdw"/>
                         <outlet property="dice1Image" destination="fSl-eA-KS1" id="UgN-Ot-Qh5"/>
                         <outlet property="dice2Image" destination="WdA-d1-TFt" id="Mtz-R4-bJq"/>
+                        <outlet property="diceButton" destination="kgP-Zn-LA2" id="Xjh-ii-ngN"/>
+                        <outlet property="diceView" destination="UxL-TZ-tYY" id="U6J-dy-cuC"/>
+                        <outlet property="gamesView" destination="lpr-tl-rvf" id="JoI-zK-QEV"/>
+                        <outlet property="infectButton" destination="q09-aJ-ovO" id="Zcr-6l-NAI"/>
                         <outlet property="player1GamesLabel" destination="8bO-gm-uXj" id="cqf-EA-dWH"/>
                         <outlet property="player1InfectButton" destination="Ouz-rC-0dT" id="As7-E7-mH4"/>
                         <outlet property="player1InfectLabel" destination="vXB-iT-3q8" id="Ngd-CI-Ah8"/>
                         <outlet property="player1InfectUndoLabel" destination="Rfj-QM-U0Q" id="xag-VT-sdY"/>
                         <outlet property="player1LifeLabel" destination="I9p-Eg-16u" id="klA-xT-pqN"/>
+                        <outlet property="player1View" destination="BsO-tU-ngg" id="bFu-HK-Ld0"/>
                         <outlet property="player2GamesLabel" destination="kwH-K0-Xcn" id="xt9-yR-ugB"/>
                         <outlet property="player2InfectButton" destination="I3Y-MF-WjZ" id="Q4w-Ol-joh"/>
                         <outlet property="player2InfectLabel" destination="lMy-8b-Fdc" id="mFg-wX-iSD"/>
                         <outlet property="player2InfectUndoLabel" destination="nK5-uX-xuV" id="HCv-v7-AyU"/>
                         <outlet property="player2LifeLabel" destination="EbP-Os-R1r" id="U2Q-fh-CPm"/>
+                        <outlet property="player2View" destination="jJn-5N-HCi" id="bxQ-V0-W27"/>
+                        <outlet property="resetButton" destination="qD1-P1-kNw" id="Xzj-Ep-hhF"/>
                         <outlet property="rollDiceButton" destination="h8u-tN-UU0" id="La0-tD-cFy"/>
                         <outlet property="settingsButton" destination="6u2-HC-eEf" id="4F9-GI-x0S"/>
+                        <outlet property="settingsView" destination="oKY-Hq-iPt" id="UmQ-Fj-lFs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

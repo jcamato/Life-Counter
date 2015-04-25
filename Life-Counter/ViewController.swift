@@ -20,8 +20,17 @@ class ViewController: UIViewController {
     var player1Infect: Int = 0
     var player2Infect: Int = 0
     
-    var Infect: Bool = true
-    var Dice: Bool = true
+    @IBOutlet weak var player1View: UIView!
+    @IBOutlet weak var player2View: UIView!
+    @IBOutlet weak var gamesView: UIView!
+    @IBOutlet weak var diceView: UIView!
+    @IBOutlet weak var resetButton: UIButton!
+
+    @IBOutlet weak var settingsView: UIView!
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBOutlet weak var infectButton: UISwitch!
+    @IBOutlet weak var diceButton: UISwitch!
     
     @IBOutlet weak var player1LifeLabel: UILabel!
     @IBOutlet weak var player2LifeLabel: UILabel!
@@ -46,6 +55,8 @@ class ViewController: UIViewController {
     
     var blue = UIColor(red: (58/255.0), green: (131/255.0), blue: (180/255.0), alpha: 1)
     var green = UIColor(red: (83/255.0), green: (162/255.0), blue: (111/255.0), alpha: 1)
+    
+    
 
     func makeGradient() {
         var gradientColors: [CGColor] = [green.CGColor, blue.CGColor]
@@ -62,22 +73,13 @@ class ViewController: UIViewController {
         
         makeGradient()
         
+        backButton.hidden = true
+        settingsView.hidden = true
+        
         player1InfectUndoLabel.alpha = 0
         player2InfectUndoLabel.alpha = 0
         
         UIApplication.sharedApplication().idleTimerDisabled = true
-        
-        if !Infect {
-            hideInfect()
-        } else {
-            showInfect()
-        }
-        
-        if !Dice {
-            hideDice()
-        } else {
-            showDice()
-        }
     }
     
     func gameHasEnded() -> Bool {
@@ -269,22 +271,43 @@ class ViewController: UIViewController {
         rollDiceButton.hidden = false
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var settingsVC: SettingsViewController = segue.destinationViewController as! SettingsViewController
+    @IBAction func showSettings(sender: AnyObject) {
         
-        if !Infect {
-            settingsVC.hideInfect = true
+        player1View.hidden = true
+        player2View.hidden = true
+        gamesView.hidden = true
+        diceView.hidden = true
+        resetButton.hidden = true
+        backButton.hidden = false
+        settingsView.hidden = false
+    }
+    
+    @IBAction func backButton(sender: AnyObject) {
+        player1View.hidden = false
+        player2View.hidden = false
+        gamesView.hidden = false
+        diceView.hidden = false
+        resetButton.hidden = false
+        backButton.hidden = true
+        settingsView.hidden = true
+    }
+    
+    @IBAction func showInfectButton(sender: AnyObject) {
+        if infectButton.on {
+            showInfect()
         } else {
-            settingsVC.hideInfect = false
-        }
-        
-        if !Dice {
-        settingsVC.hideDice = true
-        } else {
-        settingsVC.hideDice = false
+            hideInfect()
         }
     }
-
+    
+    @IBAction func showDiceButton(sender: AnyObject) {
+        if diceButton.on {
+            showDice()
+        } else {
+            hideDice()
+        }
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return false
     }
