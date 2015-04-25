@@ -55,8 +55,6 @@ class ViewController: UIViewController {
     
     var blue = UIColor(red: (58/255.0), green: (131/255.0), blue: (180/255.0), alpha: 1)
     var green = UIColor(red: (83/255.0), green: (162/255.0), blue: (111/255.0), alpha: 1)
-    
-    
 
     func makeGradient() {
         var gradientColors: [CGColor] = [green.CGColor, blue.CGColor]
@@ -272,7 +270,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showSettings(sender: AnyObject) {
-        
         player1View.hidden = true
         player2View.hidden = true
         gamesView.hidden = true
