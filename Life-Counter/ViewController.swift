@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     var Infect: Bool = true
     var Dice: Bool = true
-
+    
     @IBOutlet weak var player1LifeLabel: UILabel!
     @IBOutlet weak var player2LifeLabel: UILabel!
     
