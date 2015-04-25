@@ -53,11 +53,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var rollDiceButton: UIButton!
     
-    var blue = UIColor(red: (58/255.0), green: (131/255.0), blue: (180/255.0), alpha: 1)
     var green = UIColor(red: (83/255.0), green: (162/255.0), blue: (111/255.0), alpha: 1)
+    var blue = UIColor(red: (58/255.0), green: (131/255.0), blue: (180/255.0), alpha: 1)
+    
+    var yellow = UIColor(red: (211/255.0), green: (182/255.0), blue: (76/255.0), alpha: 1)
+    var orange = UIColor(red: (228/255.0), green: (116/255.0), blue: (52/255.0), alpha: 1)
+    
+    var pink = UIColor(red: (190/255.0), green: (65/255.0), blue: (65/255.0), alpha: 1)
+    var purple = UIColor(red: (152/255.0), green: (81/255.0), blue: (214/255.0), alpha: 1)
 
-    func makeGradient() {
-        var gradientColors: [CGColor] = [green.CGColor, blue.CGColor]
+    func makeGradient(leftColor: UIColor, rightColor: UIColor) {
+        var gradientColors: [CGColor] = [leftColor.CGColor, rightColor.CGColor]
         var gradientLayer: CAGradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = gradientColors
@@ -69,10 +75,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        makeGradient()
+        makeGradient(green, rightColor: blue)
         
-        backButton.hidden = true
-        settingsView.hidden = true
+        showSettings()
         
         player1InfectUndoLabel.alpha = 0
         player2InfectUndoLabel.alpha = 0
@@ -270,6 +275,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showSettings(sender: AnyObject) {
+        showSettings()
+    }
+    
+    @IBAction func backButton(sender: AnyObject) {
+        showMain()
+    }
+    
+    @IBAction func showInfectButton(sender: AnyObject) {
+        if infectButton.on {
+            showInfect()
+        } else {
+            hideInfect()
+        }
+    }
+    
+    func showSettings() {
         player1View.hidden = true
         player2View.hidden = true
         gamesView.hidden = true
@@ -280,7 +301,7 @@ class ViewController: UIViewController {
         settingsView.hidden = false
     }
     
-    @IBAction func backButton(sender: AnyObject) {
+    func showMain() {
         player1View.hidden = false
         player2View.hidden = false
         gamesView.hidden = false
@@ -289,14 +310,6 @@ class ViewController: UIViewController {
         settingsButton.hidden = false
         backButton.hidden = true
         settingsView.hidden = true
-    }
-    
-    @IBAction func showInfectButton(sender: AnyObject) {
-        if infectButton.on {
-            showInfect()
-        } else {
-            hideInfect()
-        }
     }
     
     @IBAction func showDiceButton(sender: AnyObject) {

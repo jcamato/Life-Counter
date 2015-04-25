@@ -20,11 +20,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BsO-tU-ngg">
                                 <rect key="frame" x="16" y="138" width="215" height="325"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re8-P4-8HG">
+                                        <rect key="frame" x="63" y="218" width="90" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="Ofl-Wm-k2Y"/>
+                                            <constraint firstAttribute="width" constant="90" id="Xu0-U1-hJv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="-12" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="–">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="p1Minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mVP-ha-Haj"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftq-yf-Eqb">
-                                        <rect key="frame" x="70" y="33" width="75" height="75"/>
+                                        <rect key="frame" x="63" y="33" width="90" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="0fH-Ue-K2N"/>
-                                            <constraint firstAttribute="width" constant="75" id="m3b-rv-CFP"/>
+                                            <constraint firstAttribute="width" constant="90" id="m3b-rv-CFP"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="-14" maxX="0.0" maxY="0.0"/>
@@ -34,21 +50,6 @@
                                         </state>
                                         <connections>
                                             <action selector="p1Plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgo-SB-FbL"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouz-rC-0dT">
-                                        <rect key="frame" x="0.0" y="275" width="55" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="DDu-VD-NpY"/>
-                                            <constraint firstAttribute="width" constant="55" id="Nem-9g-IS7"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
-                                        <state key="normal" title="infect">
-                                            <color key="titleColor" red="0.61960784310000006" green="1" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="p1Infect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Auc-L2-V4G"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfj-QM-U0Q">
@@ -66,6 +67,21 @@
                                             <action selector="p1InfectUndo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fLH-lp-rOf"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouz-rC-0dT">
+                                        <rect key="frame" x="0.0" y="275" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="DDu-VD-NpY"/>
+                                            <constraint firstAttribute="width" constant="55" id="Nem-9g-IS7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="infect">
+                                            <color key="titleColor" red="0.61960784310000006" green="1" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="p1Infect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Auc-L2-V4G"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXB-iT-3q8">
                                         <rect key="frame" x="83" y="275" width="50" height="50"/>
                                         <constraints>
@@ -76,22 +92,6 @@
                                         <color key="textColor" red="0.61960784310000006" green="1" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re8-P4-8HG">
-                                        <rect key="frame" x="70" y="218" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="Ofl-Wm-k2Y"/>
-                                            <constraint firstAttribute="width" constant="75" id="Xu0-U1-hJv"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="-12" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="–">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="p1Minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mVP-ha-Haj"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9p-Eg-16u">
                                         <rect key="frame" x="32" y="108" width="150" height="110"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -126,9 +126,9 @@
                                 <rect key="frame" x="369" y="138" width="215" height="325"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvq-SI-nyp">
-                                        <rect key="frame" x="70" y="218" width="75" height="75"/>
+                                        <rect key="frame" x="63" y="218" width="90" height="75"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="AxN-5L-o3P"/>
+                                            <constraint firstAttribute="width" constant="90" id="AxN-5L-o3P"/>
                                             <constraint firstAttribute="height" constant="75" id="m9y-pM-r9X"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
@@ -142,10 +142,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YP1-X0-M8D">
-                                        <rect key="frame" x="70" y="33" width="75" height="75"/>
+                                        <rect key="frame" x="63" y="33" width="90" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="4G5-x2-Rds"/>
-                                            <constraint firstAttribute="width" constant="75" id="mPU-hW-4kV"/>
+                                            <constraint firstAttribute="width" constant="90" id="mPU-hW-4kV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="-14" maxX="0.0" maxY="0.0"/>
@@ -172,6 +172,21 @@
                                             <action selector="p2InfectUndo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVf-ZH-STz"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3Y-MF-WjZ">
+                                        <rect key="frame" x="160" y="275" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="nlZ-gG-8Xb"/>
+                                            <constraint firstAttribute="height" constant="50" id="xNu-06-s51"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="infect">
+                                            <color key="titleColor" red="0.61960784310000006" green="1" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="p2Infect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRw-qV-SdL"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMy-8b-Fdc">
                                         <rect key="frame" x="83" y="275" width="50" height="50"/>
                                         <constraints>
@@ -192,21 +207,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3Y-MF-WjZ">
-                                        <rect key="frame" x="160" y="275" width="55" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="55" id="nlZ-gG-8Xb"/>
-                                            <constraint firstAttribute="height" constant="50" id="xNu-06-s51"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
-                                        <state key="normal" title="infect">
-                                            <color key="titleColor" red="0.61960784310000006" green="1" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="p2Infect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRw-qV-SdL"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -302,17 +302,17 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-TZ-tYY">
-                                <rect key="frame" x="250" y="492" width="100" height="100"/>
+                                <rect key="frame" x="250" y="500" width="100" height="100"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice3.png" translatesAutoresizingMaskIntoConstraints="NO" id="fSl-eA-KS1">
-                                        <rect key="frame" x="0.0" y="8" width="45" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="Vrs-gE-QQd"/>
                                             <constraint firstAttribute="height" constant="45" id="aEQ-tt-ShV"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice4.png" translatesAutoresizingMaskIntoConstraints="NO" id="WdA-d1-TFt">
-                                        <rect key="frame" x="55" y="8" width="45" height="45"/>
+                                        <rect key="frame" x="55" y="0.0" width="45" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="zeb-1j-BEs"/>
                                             <constraint firstAttribute="height" constant="45" id="zwl-hW-sKN"/>
@@ -342,9 +342,9 @@
                                     <constraint firstAttribute="width" constant="100" id="HKJ-Sw-5Zk"/>
                                     <constraint firstItem="fSl-eA-KS1" firstAttribute="leading" secondItem="UxL-TZ-tYY" secondAttribute="leading" id="PAL-cx-YSp"/>
                                     <constraint firstAttribute="bottom" secondItem="h8u-tN-UU0" secondAttribute="bottom" constant="15" id="QPN-63-6p8"/>
-                                    <constraint firstItem="fSl-eA-KS1" firstAttribute="top" secondItem="UxL-TZ-tYY" secondAttribute="top" constant="8" id="TF2-5Q-jct"/>
+                                    <constraint firstItem="fSl-eA-KS1" firstAttribute="top" secondItem="UxL-TZ-tYY" secondAttribute="top" id="TF2-5Q-jct"/>
                                     <constraint firstAttribute="centerX" secondItem="h8u-tN-UU0" secondAttribute="centerX" id="bYM-Ht-ibq"/>
-                                    <constraint firstItem="WdA-d1-TFt" firstAttribute="top" secondItem="UxL-TZ-tYY" secondAttribute="top" constant="8" id="bfS-O9-B8h"/>
+                                    <constraint firstItem="WdA-d1-TFt" firstAttribute="top" secondItem="UxL-TZ-tYY" secondAttribute="top" id="bfS-O9-B8h"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6u2-HC-eEf">
@@ -402,8 +402,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="R4E-7K-uAO"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="TZY-kW-vrg"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="iOd-sS-Pvs"/>
                                     <constraint firstAttribute="height" constant="80" id="n42-ff-tVA"/>
                                 </constraints>
                             </view>
@@ -438,7 +436,7 @@
                             <constraint firstItem="6u2-HC-eEf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gea-zt-sCV"/>
                             <constraint firstAttribute="centerX" secondItem="UxL-TZ-tYY" secondAttribute="centerX" id="kci-5h-ciN"/>
                             <constraint firstItem="x96-fM-gLQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kex-YY-4IO"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UxL-TZ-tYY" secondAttribute="bottom" constant="8" id="kqH-e8-2M7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UxL-TZ-tYY" secondAttribute="bottom" id="kqH-e8-2M7"/>
                             <constraint firstAttribute="centerX" secondItem="qD1-P1-kNw" secondAttribute="centerX" id="lEG-7F-hIM"/>
                             <constraint firstAttribute="centerY" secondItem="oKY-Hq-iPt" secondAttribute="centerY" id="qCb-QP-cHb"/>
                         </constraints>
