@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         
         makeGradient(green, rightColor: blue)
         
-        showSettings()
+        showMain()
         
         player1InfectUndoLabel.alpha = 0
         player2InfectUndoLabel.alpha = 0
@@ -290,6 +290,29 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func showDiceButton(sender: AnyObject) {
+        if diceButton.on {
+            showDice()
+        } else {
+            hideDice()
+        }
+    }
+    
+    @IBAction func greenBlueGradient(sender: AnyObject) {
+        self.view.layer.sublayers.removeAtIndex(0)
+        makeGradient(green, rightColor: blue)
+    }
+    
+    @IBAction func yellowOrangeGradient(sender: AnyObject) {
+        self.view.layer.sublayers.removeAtIndex(0)
+        makeGradient(yellow, rightColor: orange)
+    }
+    
+    @IBAction func pinkPurpleGradient(sender: AnyObject) {
+        self.view.layer.sublayers.removeAtIndex(0)
+        makeGradient(pink, rightColor: purple)
+    }
+    
     func showSettings() {
         player1View.hidden = true
         player2View.hidden = true
@@ -310,14 +333,6 @@ class ViewController: UIViewController {
         settingsButton.hidden = false
         backButton.hidden = true
         settingsView.hidden = true
-    }
-    
-    @IBAction func showDiceButton(sender: AnyObject) {
-        if diceButton.on {
-            showDice()
-        } else {
-            hideDice()
-        }
     }
     
     override func prefersStatusBarHidden() -> Bool {

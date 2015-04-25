@@ -40,6 +40,14 @@
                     <exclude reference="8ie-xW-0ye"/>
                     <exclude reference="kId-c2-rCX"/>
                 </mask>
+                <mask key="constraints">
+                    <exclude reference="5cJ-9S-tgC"/>
+                    <exclude reference="Koa-jz-hwk"/>
+                    <exclude reference="fvb-Df-36g"/>
+                    <exclude reference="Kzo-t9-V3l"/>
+                    <exclude reference="MfP-vx-nX0"/>
+                    <exclude reference="ZEH-qu-HZ9"/>
+                </mask>
             </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>

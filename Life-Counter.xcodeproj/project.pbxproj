@@ -20,6 +20,9 @@
 		AB4960DE1AE630A80043BB68 /* Dice5.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4960D81AE630A80043BB68 /* Dice5.png */; };
 		AB4960DF1AE630A80043BB68 /* Dice6.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4960D91AE630A80043BB68 /* Dice6.png */; };
 		AB4960E11AE63BE20043BB68 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4960E01AE63BE20043BB68 /* Settings.png */; };
+		ABA68A131AEB7E9C008D3194 /* GB.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA68A101AEB7E9C008D3194 /* GB.png */; };
+		ABA68A141AEB7E9C008D3194 /* PP.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA68A111AEB7E9C008D3194 /* PP.png */; };
+		ABA68A151AEB7E9C008D3194 /* YO.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA68A121AEB7E9C008D3194 /* YO.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		AB4960D81AE630A80043BB68 /* Dice5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dice5.png; sourceTree = "<group>"; };
 		AB4960D91AE630A80043BB68 /* Dice6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dice6.png; sourceTree = "<group>"; };
 		AB4960E01AE63BE20043BB68 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		ABA68A101AEB7E9C008D3194 /* GB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GB.png; sourceTree = "<group>"; };
+		ABA68A111AEB7E9C008D3194 /* PP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PP.png; sourceTree = "<group>"; };
+		ABA68A121AEB7E9C008D3194 /* YO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YO.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,9 @@
 				AB4960D71AE630A80043BB68 /* Dice4.png */,
 				AB4960D81AE630A80043BB68 /* Dice5.png */,
 				AB4960D91AE630A80043BB68 /* Dice6.png */,
+				ABA68A101AEB7E9C008D3194 /* GB.png */,
+				ABA68A111AEB7E9C008D3194 /* PP.png */,
+				ABA68A121AEB7E9C008D3194 /* YO.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -221,10 +230,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA68A151AEB7E9C008D3194 /* YO.png in Resources */,
 				AB4960E11AE63BE20043BB68 /* Settings.png in Resources */,
+				ABA68A141AEB7E9C008D3194 /* PP.png in Resources */,
 				AB4064D31AE5F6EB00A1EE1A /* Main.storyboard in Resources */,
 				AB4064D81AE5F6EB00A1EE1A /* LaunchScreen.xib in Resources */,
 				AB4960DD1AE630A80043BB68 /* Dice4.png in Resources */,
+				ABA68A131AEB7E9C008D3194 /* GB.png in Resources */,
 				AB4960DC1AE630A80043BB68 /* Dice3.png in Resources */,
 				AB4960DA1AE630A80043BB68 /* Dice1.png in Resources */,
 				AB4960DF1AE630A80043BB68 /* Dice6.png in Resources */,
