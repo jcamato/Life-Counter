@@ -1,2 +1,2 @@
 # Life-Counter
-MTG Life Counter
+iOS App - MTG Life Counter
