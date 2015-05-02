@@ -147,18 +147,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func p1MinusFive(sender: AnyObject) {
-        if (gameHasEnded() == false) {
-            if (player1Life >= 5) {
-                player1Life -= 5
-            }
-            else {
-                player1Life = 0
-            }
-            updatePlayer1Life()
-        }
-    }
-    
     @IBAction func p1Infect(sender: AnyObject) {
         if (gameHasEnded() == false) {
             player1Infect -= 1
@@ -207,18 +195,6 @@ class ViewController: UIViewController {
     @IBAction func p2Minus(sender: AnyObject) {
         if (gameHasEnded() == false) {
             player2Life -= 1
-            updatePlayer2Life()
-        }
-    }
-    
-    @IBAction func p2MinusFive(sender: AnyObject) {
-        if (gameHasEnded() == false) {
-            if (player2Life >= 5) {
-                player2Life -= 5
-            }
-            else {
-                player2Life = 0
-            }
             updatePlayer2Life()
         }
     }
